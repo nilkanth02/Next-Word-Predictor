@@ -38,7 +38,8 @@ if st.session_state.user_input.strip() != "":
     for i, word in enumerate(suggestions):
         if word and cols[i].button(f"🔹 {word}"):
             st.session_state.user_input += " " + word
-            st.experimental_rerun()
+            st.rerun()
+
 else:
     st.info("Start typing below to get predictions...")
 
